@@ -39,5 +39,6 @@
 	pkgs.curl
 	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
+	pkgs.eww
  ];
 }
