@@ -68,15 +68,6 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  nix.settings.substituters = [
-  "https://cache.nixos.org/"
-  "https://nix-community.cachix.org"
-  ];
-  nix.settings.trusted-public-keys = [
-    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    "nix-community.cachix.org-1:7C/oKkq1bA4np3Uu1CZ8sS5u1d5rHjVE7U2rA8m+E6s="
-  ];
-
   nix.gc = {
   automatic = true;                 # включает автоматическую очистку
   dates = "weekly";                 # как часто (можно daily, weekly, monthly)
