@@ -71,6 +71,6 @@
   nix.gc = {
   automatic = true;                 # включает автоматическую очистку
   dates = "weekly";                 # как часто (можно daily, weekly, monthly)
-  options = "--delete-older-than 60d";  # удалить поколения старше 30 дней
+  options = "--delete-older-than 30d";  # удалить поколения старше 30 дней
   };
 }
