@@ -1,17 +1,17 @@
-{config, pkgs, lib, ...}:
+{ config, pkgs, lib, ... }:
 
 {
   nix.gc = {
-  automatic = true;                 # включает автоматическую очистку
-  dates = "weekly";                 # как часто (можно daily, weekly, monthly)
-  options = "--delete-older-than 30d";  # удалить поколения старше 30 дней
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
   };
- services.xserver={
-  enable=true;
-   displayManager.gdm={
-   enable=true;
-   wayland=true;
-  };
- };
- programs.hyprland.enable = true;
+
+  services.xserver.enable = false;
+
+  services.getty.autologinUser = "LiyaVR";
+
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
+  programs.hypridle.enable = true;
 }
