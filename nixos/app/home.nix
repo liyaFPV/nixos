@@ -9,7 +9,7 @@
 
   services.xserver.enable = false;
 
-  services.getty.autologinUser = "LiyaVR";
+  services.getty.autologinUser = "liyavr";
 
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
