@@ -3,7 +3,7 @@ read -p "Применить системную конфигурацию? (y/n): 
 case "$answer" in
   y|Y)
     echo "Копирую конфиги пользователя..."
-    cp -r .config/* /home/liyavr/.config/
+    sudo cp -r .config/* /home/liyavr/.config/
 
     echo "Копирую конфиги NixOS..."
     sudo cp -r nixos/* /etc/nixos/
@@ -12,7 +12,7 @@ case "$answer" in
     sudo nixos-rebuild switch
     ;;
   n|N)
-    echo "Копирую только пользовательские конфиги..."
+    sudo echo "Копирую только пользовательские конфиги..."
     cp -r .config/* /home/liyavr/.config/
     ;;
   *)
