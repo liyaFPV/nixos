@@ -4,18 +4,17 @@
 }
 
 window#waybar {
-  background: transparent;
-}
-
-/* плашка */
-#group-clockbox {
-  background-color: #26266d;
-  padding: 6px 16px;
-  margin: 4px;
-  border-radius: 12px;
+  background: #121213;
 }
 
 /* часы внутри */
-#group-clockbox #clock {
-  color: #ffffff;
+#clock {
+  color: #999999;
+}
+
+#hyprland/workspaces{
+    color: #999999;
+}
+#sway/language{
+    color: #999999;
 }
