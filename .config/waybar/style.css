@@ -5,16 +5,11 @@
 
 window#waybar {
   background: #121213;
+  border-radius: 50%;
+  width: 16px;
 }
 
 /* часы внутри */
 #clock {
   color: #999999;
-}
-
-#hyprland/workspaces{
-    color: #999999;
-}
-#sway/language{
-    color: #999999;
 }
