@@ -2,18 +2,15 @@
   "layer": "top",
   "position": "top",
   "height": 20,
-
-  "modules-left": [""],
+  "modules-left": [],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio/slider"],
-
+  "modules-right": ["pulseaudio-slider"],   // ← так
   "clock": {
     "interval": 1,
     "format": "{:%H:%M:%S}",
     "max-length": 25
-  }
-
-  "pulseaudio/slider": {
+  },
+  "pulseaudio-slider": {   // ← и тут тоже
     "min": 0,
     "max": 100,
     "orientation": "horizontal"

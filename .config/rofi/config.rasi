@@ -25,4 +25,3 @@ element-icon {
   background-color: transparent;
 }
 
-@import "/home/liyavr/.config/rofi/themes/DarkBlue.rasi"
