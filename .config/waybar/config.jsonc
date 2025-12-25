@@ -1,11 +1,11 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 36,
+  "height": 20,
 
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [""],
   "modules-center": ["clock"],
-  "modules-right": ["sway/language"],
+  "modules-right": ["pulseaudio/slider"],
 
   "clock": {
     "interval": 1,
@@ -13,4 +13,9 @@
     "max-length": 25
   }
 
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  }
 }
