@@ -1,26 +1,38 @@
-read -p "Применить системную конфигурацию? (y/n): " answer
+#!/usr/bin/env bash
+set -euo pipefail
+
+USER_CFG_DIR="$HOME/.config"
+ETC_NIXOS="/etc/nixos"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+read -rp "Применить системную конфигурацию? (y/n): " answer
 
 case "$answer" in
   y|Y)
-    echo "Копирую конфиги пользователя..."
-    cp -r .config/hypr* /home/liyavr/.config/hypr/
-    cp -r .config/rofi* /home/liyavr/.config/rofi/
-    cp -r .config/waybar* /home/liyavr/.config/waybar/
+    echo "Копирую пользовательские конфиги…"
+    rm -rf "$USER_CFG_DIR/hypr" "$USER_CFG_DIR/rofi" "$USER_CFG_DIR/waybar"
+    rsync -a --delete "$SCRIPT_DIR/.config/hypr"   "$USER_CFG_DIR/"
+    rsync -a --delete "$SCRIPT_DIR/.config/rofi"   "$USER_CFG_DIR/"
+    rsync -a --delete "$SCRIPT_DIR/.config/waybar" "$USER_CFG_DIR/"
 
-    echo "Копирую конфиги NixOS..."
-    sudo cp -r nixos/* /etc/nixos/
+    echo "Копирую /etc/nixos…"
+    sudo rm -rf "$ETC_NIXOS"/*
+    sudo rsync -a --delete "$SCRIPT_DIR/nixos/" "$ETC_NIXOS/"
 
-    echo "Пересборка системы..."
+    echo "Пересобираю NixOS…"
     sudo nixos-rebuild switch
     ;;
   n|N)
-    sudo echo "Копирую только пользовательские конфиги..."
-    cp -r .config/hypr* /home/liyavr/.config/hypr/
-    cp -r .config/rofi* /home/liyavr/.config/rofi/
-    cp -r .config/waybar* /home/liyavr/.config/waybar/
+    echo "Копирую только пользовательские конфиги…"
+    rm -rf "$USER_CFG_DIR/hypr" "$USER_CFG_DIR/rofi" "$USER_CFG_DIR/waybar"
+    rsync -a --delete "$SCRIPT_DIR/.config/hypr"   "$USER_CFG_DIR/"
+    rsync -a --delete "$SCRIPT_DIR/.config/rofi"   "$USER_CFG_DIR/"
+    rsync -a --delete "$SCRIPT_DIR/.config/waybar" "$USER_CFG_DIR/"
     ;;
   *)
-    echo "Ошибка: введите y или n"
+    echo "Ошибка: введите y или n" >&2
     exit 1
     ;;
 esac
+
+echo "Готово."
