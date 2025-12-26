@@ -13,5 +13,6 @@
 
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
-  programs.hypridle.enable = true;
+  #programs.hypridle.enable = true;
+  services.openssh.enable = true;
 }
