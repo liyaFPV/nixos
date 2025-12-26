@@ -6,6 +6,14 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
+  services.greetd = {
+  enable = true;
+
+  settings.default_session = {
+    command = "hyprland";
+    user = "liyavr";
+  };
+  };
 
   services.xserver.enable = false;
 
@@ -13,6 +21,5 @@
 
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
-  #programs.hypridle.enable = true;
   services.openssh.enable = true;
 }
