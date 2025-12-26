@@ -15,9 +15,8 @@ case "$answer" in
     rsync -a --delete "$SCRIPT_DIR/.config/rofi"   "$USER_CFG_DIR/"
     rsync -a --delete "$SCRIPT_DIR/.config/waybar" "$USER_CFG_DIR/"
 
-    echo "Копирую /etc/nixos…"
-    sudo rm -rf "$ETC_NIXOS"/*
-    sudo rsync -a --delete "$SCRIPT_DIR/nixos/" "$ETC_NIXOS/"
+    sudo rsync -a --exclude='configuration.nix' --delete \
+         "$SCRIPT_DIR/nixos/" "$ETC_NIXOS/"
 
     echo "Пересобираю NixOS…"
     sudo nixos-rebuild switch
