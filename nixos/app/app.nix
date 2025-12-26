@@ -38,4 +38,4 @@
     pkgs.hyprlock
 	pkgs.hyprpicker
  ];
-}
+} 
