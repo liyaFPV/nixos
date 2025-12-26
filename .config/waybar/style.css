@@ -1,11 +1,11 @@
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 window#waybar {
   background: #121213;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* часы внутри */

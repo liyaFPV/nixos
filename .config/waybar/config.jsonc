@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 20,
+  "height": 22,
   "modules-left": [],
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio-slider"],   // ← так
@@ -10,9 +10,23 @@
     "format": "{:%H:%M:%S}",
     "max-length": 25
   },
-  "pulseaudio-slider": {   // ← и тут тоже
+  "pulseaudio/slider": {
     "min": 0,
     "max": 100,
     "orientation": "horizontal"
   }
+  "hyprland/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "urgent": "",
+    "active": "",
+    "default": ""
+  },
+  "sort-by-number": true
+}
 }

@@ -37,5 +37,7 @@
 	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
 	pkgs.hyprpicker
+	pkgs.pulseaudio
+	pkgs.eww
  ];
 } 
