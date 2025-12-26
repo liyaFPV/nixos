@@ -38,6 +38,5 @@
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio
-	pkgs.eww
  ];
 } 
