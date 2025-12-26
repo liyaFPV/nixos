@@ -9,7 +9,7 @@
 
   environment.systemPackages = [
 	pkgs.kitty
-	pkgs.nautilus
+	pkgs.kdePackages.dolphin
 	pkgs.firefox
 	pkgs.waybar
 	pkgs.rofi-wayland
