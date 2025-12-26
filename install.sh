@@ -3,7 +3,9 @@ read -p "Применить системную конфигурацию? (y/n): 
 case "$answer" in
   y|Y)
     echo "Копирую конфиги пользователя..."
-    sudo cp -r .config/* /home/liyavr/.config/
+    cp -r .config/hypr* /home/liyavr/.config/hypr/
+    cp -r .config/rofi* /home/liyavr/.config/rofi/
+    cp -r .config/waybar* /home/liyavr/.config/waybar/
 
     echo "Копирую конфиги NixOS..."
     sudo cp -r nixos/* /etc/nixos/
@@ -13,7 +15,9 @@ case "$answer" in
     ;;
   n|N)
     sudo echo "Копирую только пользовательские конфиги..."
-    cp -r .config/* /home/liyavr/.config/
+    cp -r .config/hypr* /home/liyavr/.config/hypr/
+    cp -r .config/rofi* /home/liyavr/.config/rofi/
+    cp -r .config/waybar* /home/liyavr/.config/waybar/
     ;;
   *)
     echo "Ошибка: введите y или n"

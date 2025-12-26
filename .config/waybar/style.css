@@ -4,7 +4,7 @@
 }
 
 window#waybar {
-  background: #ff0000;
+  background: #1d1d1d;
   border-radius: 10px;
 }
 
@@ -15,5 +15,8 @@ window#waybar {
 #pulseaudio-slider {
     padding: 0;
     margin: 0;
+    color: #373fad;
+}
+#hyprland-workspaces{
     color: #373fad;
 }
