@@ -6,7 +6,6 @@
 window#waybar {
     background: #1d1d1d;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 #workspaces button {
@@ -15,17 +14,18 @@ window#waybar {
     border: none;
     padding: 0 8px;
     margin: 0;
+    border-radius: 10px;
 }
 
 #workspaces button.active {
     color: #ffffff;
-    background: #ff6f00;
+    background: #fabd2f;
 }
+
 #workspaces button:hover {
     background: rgba(255,255,255,0.15);
     color: #ffffff;
 }
-
 
 #clock {
   color: #373fad;
