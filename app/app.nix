@@ -5,6 +5,7 @@
     [
       ./home.nix
       ./zsh.nix
+	  ./git.nix
     ];
 
   environment.systemPackages = [
@@ -13,7 +14,6 @@
 	pkgs.firefox
 	pkgs.waybar
 	pkgs.rofi-wayland
-	pkgs.git
 	pkgs.telegram-desktop
 	pkgs.htop
 	pkgs.neofetch
