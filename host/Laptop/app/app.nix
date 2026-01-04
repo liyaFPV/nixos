@@ -36,5 +36,7 @@
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio
+	pkgs.xp-pen-g430-driver
+	pkgs.neofetch
  ];
 } 
