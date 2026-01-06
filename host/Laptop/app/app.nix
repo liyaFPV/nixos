@@ -18,17 +18,16 @@
 	pkgs.htop
 	pkgs.neofetch
 	pkgs.hyprpaper
-	pkgs.freecad-wayland
 	pkgs.flatpak
 	pkgs.qbittorrent-enhanced
 	pkgs.vlc
 	pkgs.chromium
+	pkgs.boxes
 	pkgs.orca-slicer
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.arduino-ide
 	pkgs.python314
-	pkgs.gimp
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
@@ -38,5 +37,8 @@
 	pkgs.pulseaudio
 	pkgs.xp-pen-g430-driver
 	pkgs.neofetch
+	pkgs.cava
+	pkgs.cmatrix
+	pkgs.peaclock
  ];
 } 

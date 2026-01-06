@@ -40,5 +40,8 @@
 	pkgs.pulseaudio
 	pkgs.xp-pen-g430-driver
 	pkgs.neofetch
+	pkgs.cava
+	pkgs.cmatrix
+	pkgs.peaclock
  ];
 } 

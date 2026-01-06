@@ -47,7 +47,7 @@ def type_install():
     print("1. rebuild")
     print("2. rebuild and reboot")
     print("3. rebuild test")
-    print("4. rebuild flake")
+    print("4. flake lock")
 
     type=input()
 
@@ -58,7 +58,7 @@ def type_install():
     elif type==3:
         os.system("sudo nixos-rebuild switch")
     elif type==4:
-        os.system("sudo nixos-rebuild switch")
+        os.system("nix flake lock")
 
 def goodbye():
     print("installation completed successfully!")

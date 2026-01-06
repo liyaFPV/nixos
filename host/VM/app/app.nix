@@ -29,5 +29,8 @@
 	pkgs.hyprpicker
 	pkgs.pulseaudio
 	pkgs.neofetch
+	pkgs.cava
+	pkgs.cmatrix
+	pkgs.peaclock
  ];
 } 
