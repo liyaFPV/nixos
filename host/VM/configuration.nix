@@ -57,4 +57,10 @@
 
     #packages
     system.stateVersion = "25.11";
+    nix = {
+        package = pkgs.nixUnstable;  # нужна нестабильная версия Nix для flakes
+        extraOptions = ''
+        experimental-features = nix-command flakes
+        '';
+    };
 }
