@@ -29,36 +29,26 @@ def select_host():
     print("select your host:")
     print("1. Laptop")
     print("2. PC")
-    print("2. VM")
+    print("3. VM")
+    print("4. build flake")
     hosts = input()
     return hosts
 
+def build_flake():
+    os.system("./flake.sh")
+
+def install_base():
+    os.system("sudo cp -r .config /home/liyavr/")
+    os.system("sudo cp -r wallpapers /home/liyavr/")
+
+def install_laptop():
+    os.system("sudo cp -r host/Laptop /etc/nixos/")
+
+def install_pc():
+    os.system("sudo cp -r host/PC /etc/nixos/")
+
 def install_VM():
-    os.system("cp -r host/VM/app/ /etc/nixos/")
-
-def install_PC():
-    os.system("cp -r host/PC/app/ /etc/nixos/")
-
-def inatall_laptop():
-    os.system("cp -r host/Laptop/app/ /etc/nixos/")
-
-def type_install():
-    print("select installation type")
-    print("1. rebuild")
-    print("2. rebuild and reboot")
-    print("3. rebuild test")
-    print("4. flake lock")
-
-    type=input()
-
-    if type==1:
-        os.system("sudo nixos-rebuild switch")
-    elif type==2:
-        os.system("sudo nixos-rebuild switch")
-    elif type==3:
-        os.system("sudo nixos-rebuild switch")
-    elif type==4:
-        os.system("nix flake lock")
+    os.system("sudo cp -r host/VM /etc/nixos/")
 
 def goodbye():
     print("installation completed successfully!")
@@ -66,11 +56,13 @@ def goodbye():
 
 hello()
 host = select_host()
+install_base()
 if host == "1":
     install_laptop()
 elif host == "2":
-    install_PC()
+    install_pc()
 elif host == "3":
     install_VM()
-
+elif host == "4":
+    build_flake()
 goodbye()
