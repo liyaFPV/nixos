@@ -7,7 +7,9 @@
       ./zsh.nix
       ./git.nix
     ];
+
   nixpkgs.config.allowUnfree = true;
+  
   environment.systemPackages = [
 	pkgs.kitty
 	pkgs.kdePackages.dolphin
@@ -42,5 +44,6 @@
     pkgs.peaclock
 	pkgs.usbutils
 	pkgs.libinput
+	pkgs.adwaita-icon-theme
  ];
 } 
