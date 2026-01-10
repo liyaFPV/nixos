@@ -15,7 +15,7 @@
 	pkgs.kdePackages.dolphin
 	pkgs.firefox
 	pkgs.waybar
-	pkgs.rofi-wayland
+	pkgs.rofi
 	pkgs.telegram-desktop
 	pkgs.htop
 	pkgs.neofetch
