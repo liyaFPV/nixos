@@ -43,5 +43,7 @@
 	pkgs.cava
 	pkgs.cmatrix
 	pkgs.peaclock
+	pkgs.usbutils
+	pkgs.libinput
  ];
 } 

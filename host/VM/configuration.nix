@@ -1,66 +1,54 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-    imports = [
-        ./hardware-configuration.nix
-        ./app/app.nix
+  imports =
+    [
+      ./hardware-configuration.nix
+      ./app/app.nix
     ];
-    #boot
-    boot.loader.grub.enable = true;
-    boot.loader.grub.devices = "/dev/vda";
-    boot.loader.grub.useOSProber = true;
 
-    #networking
-    networking.hostName = "nixos";
-    # networking.wireless.enable = true;
-    networking.networkmanager.enable = true;
-    networking.firewall.enable = false;
-    networking.firewall.allowedTCPPorts = [];
-    networking.firewall.allowedUDPPorts = [];
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-    services.openssh = {
-        enable = true;
-        ports = [ 22 ];
-        settings = {
-            PasswordAuthentication = true;
-            AllowUsers = null;
-            PermitRootLogin = "yes";
-        };
-   };
+  networking.hostName = "nixos"; # Define your hostname.
+  networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true;
+  time.timeZone = "Asia/Yekaterinburg";
 
-    #language and locale
-    time.timeZone = "Asia/Yekaterinburg";
+  i18n.defaultLocale = "en_US.UTF-8";
 
-    i18n.defaultLocale = "en_US.UTF-8";
-    i18n.extraLocaleSettings = {
-        LC_ADDRESS = "ru_RU.UTF-8";
-        LC_IDENTIFICATION = "ru_RU.UTF-8";
-        LC_MEASUREMENT = "ru_RU.UTF-8";
-        LC_MONETARY = "ru_RU.UTF-8";
-        LC_NAME = "ru_RU.UTF-8";
-        LC_NUMERIC = "ru_RU.UTF-8";
-        LC_PAPER = "ru_RU.UTF-8";
-        LC_TELEPHONE = "ru_RU.UTF-8";
-        LC_TIME = "ru_RU.UTF-8";
-    };
-    #input
-    services.xserver.xkb = {
-        layout = "us";
-        variant = "";
-    };
-    #users
-    users.users.liyavr = {
-        isNormalUser = true;
-        description = "liyavr";
-        extraGroups = [ "wheel" "networkmanager"];
-    };
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "ru_RU.UTF-8";
+    LC_IDENTIFICATION = "ru_RU.UTF-8";
+    LC_MEASUREMENT = "ru_RU.UTF-8";
+    LC_MONETARY = "ru_RU.UTF-8";
+    LC_NAME = "ru_RU.UTF-8";
+    LC_NUMERIC = "ru_RU.UTF-8";
+    LC_PAPER = "ru_RU.UTF-8";
+    LC_TELEPHONE = "ru_RU.UTF-8";
+    LC_TIME = "ru_RU.UTF-8";
+  };
 
-    #packages
-    system.stateVersion = "25.11";
-    nix = {
-        package = pkgs.nixUnstable;  # нужна нестабильная версия Nix для flakes
-        extraOptions = ''
-        experimental-features = nix-command flakes
-        '';
-    };
+  # Configure keymap in X11
+  services.libinput.enable = true;
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+  users.users.liyavr = {
+    isNormalUser = true;
+    description = "liyavr";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [];
+  };
+
+  services.openssh.enable = true;
+
+  networking.firewall.allowedTCPPorts = [22];
+  networking.firewall.allowedUDPPorts = [22];
+  networking.firewall.enable = true;
+
+  system.stateVersion = "25.11"; # Did you read the comment?
+
 }

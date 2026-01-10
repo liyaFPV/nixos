@@ -1,19 +1,19 @@
 {config, pkgs, ...}:
 
 {
-	imports =
+    imports =
     [
       ./home.nix
       ./zsh.nix
-	  ./git.nix
+      ./git.nix
     ];
-
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = [
 	pkgs.kitty
 	pkgs.kdePackages.dolphin
 	pkgs.firefox
 	pkgs.waybar
-	pkgs.rofi-wayland
+	pkgs.rofi
 	pkgs.telegram-desktop
 	pkgs.htop
 	pkgs.neofetch
@@ -27,7 +27,7 @@
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.arduino-ide
-	pkgs.python314
+	#pkgs.python314
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
@@ -39,6 +39,8 @@
 	pkgs.neofetch
 	pkgs.cava
 	pkgs.cmatrix
-	pkgs.peaclock
+    pkgs.peaclock
+	pkgs.usbutils
+	pkgs.libinput
  ];
 } 
