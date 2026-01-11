@@ -23,7 +23,6 @@
 	pkgs.chromium
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
-	pkgs.python314
 	pkgs.wget
 	pkgs.curl
 	pkgs.nerd-fonts.zed-mono

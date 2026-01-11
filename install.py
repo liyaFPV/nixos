@@ -43,12 +43,15 @@ def install_base():
 
 def install_laptop():
     os.system("sudo cp -r host/Laptop /etc/nixos/")
+    os.system("sudo nixos-rebuild switch --flake .#laptop")
 
 def install_pc():
     os.system("sudo cp -r host/PC /etc/nixos/")
+    os.system("sudo nixos-rebuild switch --flake .#pc")
 
 def install_VM():
     os.system("sudo cp -r host/VM /etc/nixos/")
+    os.system("sudo nixos-rebuild switch --flake .#vm")
 
 def goodbye():
     print("installation completed successfully!")

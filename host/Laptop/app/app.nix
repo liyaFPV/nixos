@@ -29,7 +29,7 @@
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.arduino-ide
-	#pkgs.python314
+	pkgs.python311
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
@@ -45,5 +45,6 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
+	pkgs.rustdesk
  ];
 } 
