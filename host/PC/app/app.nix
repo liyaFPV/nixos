@@ -15,7 +15,7 @@
 	pkgs.kdePackages.dolphin
 	pkgs.firefox
 	pkgs.waybar
-	pkgs.rofi-wayland
+	pkgs.rofi
 	pkgs.telegram-desktop
 	pkgs.htop
 	pkgs.neofetch
@@ -31,12 +31,11 @@
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.arduino-ide
-	pkgs.python314
+	pkgs.python311
 	pkgs.gimp
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
-	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio
@@ -48,6 +47,6 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
-	pkgs.kdePackages.plasma-desktop
+	pkgs.vscode
  ];
 } 
