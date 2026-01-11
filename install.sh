@@ -1,7 +1,8 @@
-#!/bin/bash
 
-hello() {
-    cat <<'EOF'
+# ---------------------------
+# ASCII-баннер
+# ---------------------------
+cat <<'EOF'
  /$$       /$$                     /$$$$$$$$ /$$$$$$$  /$$    /$$
 | $$      |__/                    | $$_____/| $$__  $$| $$   | $$
 | $$       /$$ /$$   /$$  /$$$$$$ | $$      | $$  \ $$| $$   | $$
@@ -22,58 +23,43 @@ hello() {
 | $$ \  $$ /$$$$$$| $$  \ $$|  $$$$$$/|  $$$$$$/                 
 |__/  \__/|______/|__/  |__/ \______/  \______/                  
 EOF
-}
 
-goodbye() {
-    echo "installation completed successfully!"
-    echo "you are successfully isolated from society"
-}
+# ---------------------------
+# Выбор хоста
+# ---------------------------
+echo "Select your host:"
+echo "1. Laptop"
+echo "2. PC"
+echo "3. VM"
+echo "4. Build flake"
+read -p "Enter number: " host
 
-select_host() {
-    echo "select your host:"
-    echo "1. Laptop"
-    echo "2. PC"
-    echo "3. VM"
-    echo "4. build flake"
-    read -r host
-    echo "$host"
-}
+# ---------------------------
+# Установка базовых файлов
+# ---------------------------
+sudo cp -r .config /home/liyavr/
+sudo cp -r wallpapers /home/liyavr/
 
-install_base() {
-    sudo cp -r .config /home/liyavr/
-    sudo cp -r wallpapers /home/liyavr/
-}
-
-install_laptop() {
+# ---------------------------
+# Действия по выбранному хосту
+# ---------------------------
+if [ "$host" = "1" ]; then
     sudo cp -r host/Laptop /etc/nixos/
     sudo nixos-rebuild switch --flake .#laptop
-}
-
-install_pc() {
+elif [ "$host" = "2" ]; then
     sudo cp -r host/PC /etc/nixos/
     sudo nixos-rebuild switch --flake .#pc
-}
-
-install_vm() {
+elif [ "$host" = "3" ]; then
     sudo cp -r host/VM /etc/nixos/
     sudo nixos-rebuild switch --flake .#vm
-}
-
-build_flake() {
+elif [ "$host" = "4" ]; then
     ./flake.sh
-}
+else
+    echo "Invalid option!"
+fi
 
-# Main
-hello
-host=$(select_host)
-install_base
-
-case "$host" in
-    1) install_laptop ;;
-    2) install_pc ;;
-    3) install_vm ;;
-    4) build_flake ;;
-    *) echo "Invalid option" ;;
-esac
-
-goodbye
+# ---------------------------
+# Завершение
+# ---------------------------
+echo "Installation completed successfully!"
+echo "You are successfully isolated from society"
