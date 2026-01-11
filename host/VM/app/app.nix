@@ -8,14 +8,14 @@
 	  ./git.nix
     ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = false;
 
   environment.systemPackages = [
 	pkgs.kitty
 	pkgs.kdePackages.dolphin
 	pkgs.firefox
 	pkgs.waybar
-	pkgs.rofi
+	pkgs.rofi-wayland
 	pkgs.htop
 	pkgs.neofetch
 	pkgs.hyprpaper
@@ -23,8 +23,10 @@
 	pkgs.chromium
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
+	pkgs.python314
 	pkgs.wget
 	pkgs.curl
+	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio
@@ -35,8 +37,5 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
-	pkgs.vscode
-	pkgs.gdm
-	pkgs.kdePackages.plasma-pa
  ];
 } 

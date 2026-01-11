@@ -15,7 +15,6 @@
   networking.networkmanager.enable = true;
   time.timeZone = "Asia/Yekaterinburg";
 
-
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -52,9 +51,4 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11"; # Did you read the comment?
-  nix.settings.cores = 0;
-  documentation = {
-    enable = false;
-    doc.enable = false;  # HTML docs
-  };
 }

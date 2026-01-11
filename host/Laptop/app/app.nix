@@ -29,10 +29,11 @@
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.arduino-ide
-	pkgs.python311
+	#pkgs.python314
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
+	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio
@@ -44,8 +45,5 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
-	pkgs.vscode
-	pkgs.gdm
-	pkgs.kdePackages.plasma-pa
  ];
 } 
