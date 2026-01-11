@@ -8,7 +8,7 @@
 	  ./git.nix
     ];
 
-  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = [
 	pkgs.kitty
