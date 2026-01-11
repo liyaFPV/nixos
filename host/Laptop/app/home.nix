@@ -2,24 +2,24 @@
 
 {
   fonts.fonts = with pkgs; [
-    fira-code-nerd-font
+    nerd-fonts.fira-code       # FiraCode Nerd Font
+    # nerd-fonts.jetbrains-mono # можно раскомментировать, если нужно
+    # nerd-fonts.zed-mono       # можно добавить ещё один
   ];
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-  services.greetd = {
-  enable = true;
 
-  settings.default_session = {
+  services.greetd.enable = true;
+  services.greetd.settings.default_session = {
     command = "hyprland";
     user = "liyavr";
   };
-  };
 
   services.xserver.enable = false;
-
   services.getty.autologinUser = "liyavr";
 
   programs.hyprland.enable = true;
