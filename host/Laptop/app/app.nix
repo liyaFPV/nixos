@@ -45,5 +45,7 @@
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
 	pkgs.vscode
+	pkgs.gdm
+	pkgs.kdePackages.plasma-pa
  ];
 } 
