@@ -25,7 +25,6 @@
 	pkgs.filezilla
 	pkgs.wget
 	pkgs.curl
-	pkgs.nerd-fonts.zed-mono
     pkgs.hyprlock
 	pkgs.hyprpicker
 	pkgs.pulseaudio

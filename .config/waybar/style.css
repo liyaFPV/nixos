@@ -1,16 +1,17 @@
 * {
-    font-family: "JetBrains Mono Nerd Font";
-    /*font-family: "JetBrainsMono Nerd Font";*/
+    font-family: "FiraCode Nerd Font";
     font-weight: bold; 
     font-size: 15px;
 }
 
 #custom-notification {
-  font-family: "JetBrains Mono Nerd Font";
-  font-size: 17px;
- color: #A1BDCE;
- margin: 2px 0px 0px 0px;
+    font-family: "FiraCode Nerd Font";
+    font-size: 17px;
+    color: #A1BDCE;
+    margin: 2px 0px 0px 0px;
 }
+
+
 
 window#waybar {
     background: #0F0F17; 
@@ -187,18 +188,17 @@ background: @bar-bg;
     padding-right: 4px;
 
 }
-#clock{
+#clock {
+    font-family: "FiraCode Nerd Font";
     color: #A1BDCE;
     font-size: 15px;
     font-weight: 900;
-    font-family: "JetBrains Mono Nerd Font";
     background: rgba(23, 23, 23, 0.0);
     opacity: 1;
     margin: 3px 0px 0px 0px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;
-    
 }
 #pulseaudio{
 font-weight: normal;

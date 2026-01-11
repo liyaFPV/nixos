@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+  fonts.fonts = with pkgs; [
+    fira-code-nerd-font
+  ];
   nix.gc = {
     automatic = true;
     dates = "weekly";
