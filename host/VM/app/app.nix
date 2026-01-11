@@ -18,15 +18,12 @@
 	pkgs.rofi
 	pkgs.htop
 	pkgs.neofetch
-	pkgs.hyprpaper
 	pkgs.flatpak
 	pkgs.chromium
 	pkgs.libreoffice-qt6
 	pkgs.filezilla
 	pkgs.wget
 	pkgs.curl
-    pkgs.hyprlock
-	pkgs.hyprpicker
 	pkgs.pulseaudio
 	pkgs.neofetch
 	pkgs.cava

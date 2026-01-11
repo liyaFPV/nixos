@@ -14,12 +14,10 @@
 	pkgs.kitty
 	pkgs.kdePackages.dolphin
 	pkgs.firefox
-	pkgs.waybar
 	pkgs.rofi
 	pkgs.telegram-desktop
 	pkgs.htop
 	pkgs.neofetch
-	pkgs.hyprpaper
 	pkgs.freecad-wayland
 	pkgs.blender
 	pkgs.flatpak
@@ -36,8 +34,6 @@
 	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
-    pkgs.hyprlock
-	pkgs.hyprpicker
 	pkgs.pulseaudio
 	pkgs.xp-pen-g430-driver
 	pkgs.neofetch

@@ -15,14 +15,13 @@
 
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "hyprland";
     user = "liyavr";
   };
 
   services.xserver.enable = false;
   services.getty.autologinUser = "liyavr";
-
-  programs.hyprland.enable = true;
-  programs.hyprlock.enable = true;
   services.openssh.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
 }
