@@ -13,11 +13,6 @@
     options = "--delete-older-than 30d";
   };
 
-  services.greetd.enable = true;
-  services.greetd.settings.default_session = {
-    user = "liyavr";
-  };
-
   services.xserver.enable = false;
   services.getty.autologinUser = "liyavr";
   services.openssh.enable = true;

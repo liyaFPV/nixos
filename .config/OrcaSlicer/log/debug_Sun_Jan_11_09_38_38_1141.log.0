@@ -1,0 +1,5 @@
+[warning]	2026-01-11 09:38:38.788520[Thread 0x00007f9a85aeba80]:Failed to load to hints.cereal. File does not exists. /home/liyavr/.config/OrcaSlicer/user/hints.cereal
+[error]	2026-01-11 09:38:43.204683[Thread 0x00007f9a85aeba80]:calc_exclude_triangles:Unable to create exclude triangles
+[error]	2026-01-11 09:38:46.618798[Thread 0x00007f9a85aeba80]:calc_exclude_triangles:Unable to create exclude triangles
+[warning]	2026-01-11 09:39:23.023413[Thread 0x00007f9a85aeba80]:get_version, get_version not supported,return 00.00.00.00!
+[error]	2026-01-11 09:39:23.589526[Thread 0x00007f9a85aeba80]:calc_exclude_triangles:Unable to create exclude triangles
