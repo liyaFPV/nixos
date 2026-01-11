@@ -48,5 +48,6 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
+	pkgs.vscode
  ];
 } 
