@@ -1,3 +1,5 @@
+для клонирование рекомендуем использовать "$git clone --branch plasma --single-branch https://github.com/liyaFPV/nixos.git"
+
 Внимание!!!!
 это конфиги с kde Plasma версия с hyprland в ветке main
 
