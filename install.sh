@@ -45,13 +45,13 @@ sudo cp -r wallpapers /home/liyavr/
 # ---------------------------
 if [ "$host" = "1" ]; then
     sudo cp -r host/Laptop /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#laptop --extra-experimental-features "nix-command flakes"
 elif [ "$host" = "2" ]; then
     sudo cp -r host/PC /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#pc --extra-experimental-features "nix-command flakes"
 elif [ "$host" = "3" ]; then
     sudo cp -r host/VM /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#vm --extra-experimental-features "nix-command flakes"
 elif [ "$host" = "4" ]; then
     ./flake.sh
 else
