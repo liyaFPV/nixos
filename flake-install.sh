@@ -45,13 +45,13 @@ sudo cp -r wallpapers /home/liyavr/
 # ---------------------------
 if [ "$host" = "1" ]; then
     sudo cp -r host/Laptop /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#laptop
 elif [ "$host" = "2" ]; then
     sudo cp -r host/PC /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#pc
 elif [ "$host" = "3" ]; then
     sudo cp -r host/VM /etc/nixos/
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --flake .#vm
 elif [ "$host" = "4" ]; then
     ./flake.sh
 else
