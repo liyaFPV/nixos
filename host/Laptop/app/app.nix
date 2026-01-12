@@ -9,7 +9,6 @@
     ];
 
   nixpkgs.config.allowUnfree = true;
-  Nautilus
   environment.systemPackages = [
 	pkgs.kitty
 	pkgs.nautilus
