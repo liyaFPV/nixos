@@ -47,9 +47,8 @@
 
   networking.firewall.allowedTCPPorts = [22];
   networking.firewall.allowedUDPPorts = [22];
-  networking.firewall.enable = true;
+  networking.firewall.enable = false;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11"; # Did you read the comment?
   nix.settings.cores = 0;
   documentation = {

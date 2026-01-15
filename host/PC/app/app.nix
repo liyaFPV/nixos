@@ -6,6 +6,7 @@
       ./home.nix
       ./zsh.nix
 	  ./git.nix
+	  ./qmk.inx
     ];
 
   nixpkgs.config.allowUnfree = true;
