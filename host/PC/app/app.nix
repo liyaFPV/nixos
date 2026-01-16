@@ -49,5 +49,6 @@
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
 	pkgs.vscode
+	pkgs.ytdownloader
  ];
 } 
