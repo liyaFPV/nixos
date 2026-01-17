@@ -51,5 +51,6 @@
 	pkgs.vscode
 	pkgs.ytdownloader
 	pkgs.nixos-bgrt-plymouth
+	pkgs.plymouth
  ];
 } 

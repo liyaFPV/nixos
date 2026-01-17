@@ -36,5 +36,6 @@
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
 	pkgs.nixos-bgrt-plymouth
+	pkgs.plymouth
  ];
 } 
