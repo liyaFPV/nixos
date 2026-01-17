@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./app/app.nix
     ];
-
+  boot.consoleLogLevel = 0;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 

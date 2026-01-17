@@ -50,5 +50,6 @@
 	pkgs.adwaita-icon-theme
 	pkgs.vscode
 	pkgs.ytdownloader
+	pkgs.nixos-bgrt-plymouth
  ];
 } 
