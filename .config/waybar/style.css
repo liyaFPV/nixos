@@ -389,3 +389,10 @@ font-weight: normal;
     border-left: solid;
     border-left-width: 0.5;
 }
+
+#custom-power{
+    color : #ff1e1e;
+}
+#custom-reboot{
+    color : #ff1e1e;
+}

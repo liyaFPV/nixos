@@ -6,10 +6,10 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-   "margin-left": 10,
- "margin-right": 10,
- "margin-top": 7,
- "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-top": 7,
+    "margin-bottom": 0,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -20,7 +20,7 @@
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
 	"modules-center": ["clock"],
-	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","custom/notification","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","custom/notification","custom/padd","custom/power","custom/reboot"],
 
 
 // sourced from modules based on config.ctl //
@@ -525,4 +525,15 @@
     "device": "pulseaudio",
     "scroll-step": 1,
   },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "poweroff",
+    "on-click": "poweroff"
+  },
+
+  "custom/reboot": {
+    "format": "",
+    "tooltip": "reboot",
+    "on-click": "reboot"
+  }
 }
