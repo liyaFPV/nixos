@@ -6,6 +6,13 @@
     # nerd-fonts.jetbrains-mono # можно раскомментировать, если нужно
     # nerd-fonts.zed-mono       # можно добавить ещё один
   ];
+  environment.systemPackages = [
+    pkgs.gdm
+    pkgs.xwayland-satellite
+    pkgs.xdg-desktop-portal-gnome
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.gnome-keyring
+  ];
 
   nix.gc = {
     automatic = true;
