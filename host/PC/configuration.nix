@@ -7,12 +7,8 @@
       ./app/app.nix
     ];
   boot.consoleLogLevel = 0;
-  boot.consoleLogLevel = 0;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev"; # для UEFI
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.timeout = 5;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
