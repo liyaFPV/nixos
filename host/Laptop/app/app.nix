@@ -15,25 +15,11 @@
 	pkgs.firefox
 	pkgs.waybar
 	pkgs.rofi
-	pkgs.telegram-desktop
 	pkgs.htop
-	pkgs.neofetch
-	pkgs.hyprpaper
-	pkgs.flatpak
-	pkgs.qbittorrent-enhanced
-	pkgs.vlc
-	pkgs.chromium
-	pkgs.boxes
-	pkgs.orca-slicer
-	pkgs.libreoffice-qt6
-	pkgs.filezilla
-	pkgs.arduino-ide
 	pkgs.python311
-	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
 	pkgs.pulseaudio
-	pkgs.xp-pen-g430-driver
 	pkgs.neofetch
 	pkgs.cava
 	pkgs.cmatrix
@@ -41,7 +27,5 @@
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
-	pkgs.vscode
-	pkgs.ytdownloader
  ];
 } 

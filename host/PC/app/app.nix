@@ -1,54 +1,31 @@
 {config, pkgs, ...}:
 
 {
-	imports =
+    imports =
     [
       ./home.nix
       ./zsh.nix
-	  ./git.nix
-	  ./qmk.inx
+      ./git.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = [
 	pkgs.kitty
 	pkgs.nautilus
 	pkgs.firefox
 	pkgs.waybar
 	pkgs.rofi
-	pkgs.telegram-desktop
 	pkgs.htop
-	pkgs.neofetch
-	pkgs.hyprpaper
-	pkgs.freecad-wayland
-	pkgs.blender
-	pkgs.flatpak
-	pkgs.qbittorrent-enhanced
-	pkgs.vlc
-	pkgs.chromium
-	pkgs.boxes
-	pkgs.orca-slicer
-	pkgs.libreoffice-qt6
-	pkgs.filezilla
-	pkgs.arduino-ide
 	pkgs.python311
-	pkgs.gimp
-	pkgs.kdePackages.kdenlive
 	pkgs.wget
 	pkgs.curl
-    pkgs.hyprlock
-	pkgs.hyprpicker
 	pkgs.pulseaudio
-	pkgs.xp-pen-g430-driver
 	pkgs.neofetch
 	pkgs.cava
 	pkgs.cmatrix
-	pkgs.peaclock
+    pkgs.peaclock
 	pkgs.usbutils
 	pkgs.libinput
 	pkgs.adwaita-icon-theme
-	pkgs.vscode
-	pkgs.ytdownloader
  ];
 } 
