@@ -18,7 +18,7 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
+	"modules-left": ["custom/smallspacer","niri/workspaces","custom/spacer","mpris"],
 	"modules-center": ["clock"],
 	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","custom/notification","custom/padd","custom/power","custom/reboot"],
 
@@ -134,7 +134,7 @@
     "escape": true
   },
   
-  "hyprland/window": {  
+  "niri/window": {  
 //"format": "{}"   // <--- these is the default value  
 "format": "<span  weight='bold' >{class}</span>",
  "max-length": 120,
@@ -158,7 +158,7 @@
 
     
     
-"hyprland/workspaces": {
+"niri/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
 	"default": "",
